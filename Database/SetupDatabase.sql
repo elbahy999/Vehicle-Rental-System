@@ -1,3 +1,9 @@
+CREATE DATABASE Vehicle_Rental;
+GO
+
+USE Vehicle_Rental;
+GO
+
 CREATE TABLE Customers (
     CustomerID INT PRIMARY KEY IDENTITY(1,1),
     FirstName NVARCHAR(50) NOT NULL,
