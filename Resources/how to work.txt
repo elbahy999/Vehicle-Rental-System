@@ -1,5 +1,5 @@
 How to Find the Resources Tab
-In the Solution Explorer (left side), find the project node named projjjjj (the one with the green C# icon).
+In the Solution Explorer (left side), find the project node named Project_Names(the one with the green C# icon).
 
 Right-click that node.
 
