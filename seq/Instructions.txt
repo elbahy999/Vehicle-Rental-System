@@ -49,3 +49,7 @@ Cycle the Visual Cache:
 -Go to the Solution Explorer on the right.
 -Double-click BaseForm.cs to reload the freshly compiled metadata layout.
 -(Tip: If errors persist, press F7 on the form to view the backend code and confirm that its namespace header matches your current project namespace precisely (e.g., namespace projjjjj).)
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Note:
+After getting everything to work, paste the code in "SetupDatabase.sql" and click a "New Query".
