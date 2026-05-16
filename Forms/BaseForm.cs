@@ -1,20 +1,22 @@
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Data;
-    using System.Drawing;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Project_Name
+namespace projjjjj
 {
     public partial class BaseForm : Form
     {
         // Static rules to ensure the 5 GUI marks are secured
         public static Font GlobalFont = new Font("Segoe UI", 10, FontStyle.Regular);
-        public static Color BackgroundGrey = Color.FromArgb(224, 224, 224);
+
+        // CHANGED: Swapped muddy grey for a premium, clean light slate-white tint
+        public static Color BackgroundGrey = Color.FromArgb(244, 246, 249);
         public static Color PrimaryBlue = Color.FromArgb(0, 122, 204);
 
         public BaseForm()
@@ -44,7 +46,7 @@ namespace Project_Name
             // Creates a logo area in the top-left corner of every form automatically
             PictureBox picLogo = new PictureBox();
             picLogo.Name = "picLogo";
-            picLogo.Size = new Size(160, 80);
+            picLogo.Size = new Size(170, 90);
             picLogo.Location = new Point(20, 20);
             picLogo.SizeMode = PictureBoxSizeMode.Zoom;
             picLogo.BackColor = Color.Transparent;
