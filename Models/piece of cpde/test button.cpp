@@ -16,7 +16,6 @@
                 }
                 catch (Exception ex)
                 {
-                    // Member 6 will eventually handle this logging to a .txt file
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
