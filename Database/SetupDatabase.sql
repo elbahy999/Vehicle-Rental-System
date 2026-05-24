@@ -33,3 +33,11 @@ CREATE TABLE Rentals (
     CONSTRAINT FK_Rental_Customer FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
     CONSTRAINT FK_Rental_Vehicle FOREIGN KEY (VehicleID) REFERENCES Vehicles(VehicleID)
 );
+
+CREATE TABLE ErrorLogs (
+    ErrorID     INT IDENTITY PRIMARY KEY,
+    Source      NVARCHAR(200),
+    Message     NVARCHAR(MAX),
+    StackTrace  NVARCHAR(MAX),
+    OccurredAt  DATETIME
+); 
