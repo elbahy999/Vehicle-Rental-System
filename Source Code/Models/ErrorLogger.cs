@@ -45,8 +45,12 @@ namespace projjjjj
             catch
             {
                 // DB unavailable — store in memory so the app keeps running
+                if (_memoryLog.Count >= 500)
+                    _memoryLog.RemoveAt(0);
+
                 _memoryLog.Add($"[{occurredAt:yyyy-MM-dd HH:mm:ss}] [{source}] {message}");
             }
+            
         }
 
         /// <summary>
