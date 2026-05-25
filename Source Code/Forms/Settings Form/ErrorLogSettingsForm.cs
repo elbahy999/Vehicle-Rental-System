@@ -54,14 +54,16 @@ namespace projjjjj
                         dgvErrors.Columns["StackTrace"].Visible = false;
 
                     lblStatus.Text = $"Loaded {dt.Rows.Count} log entries.";
+
+                    ErrorLogger.ClearMemoryLogs();
                 }
             }
             catch (Exception ex)
             {
                 // Can't log to DB if DB is the problem — show in-memory fallback
                 lblStatus.Text = "DB unavailable. Showing in-memory logs.";
-                ShowMemoryLogs();
                 ErrorLogger.Log(ex, "ErrorLogSettingsForm.LoadErrorLogs");
+                ShowMemoryLogs();
             }
         }
 
@@ -77,6 +79,7 @@ namespace projjjjj
                 dt.Rows.Add("Memory", entry, DateTime.Now.ToString());
 
             dgvErrors.DataSource = dt;
+            lblStatus.Text = $"DB unavailable. Showing {logs.Count} in-memory log(s).";
         }
 
         private void btnRefreshLogs_Click(object sender, EventArgs e)
