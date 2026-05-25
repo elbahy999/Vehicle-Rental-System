@@ -461,7 +461,7 @@ The application verifies the database connection on startup and warns you if it 
 
 ## 👥 Project Team
 
-| Member Name | Student ID |
+| Member Name |
 |---|---|
 | Ziad Ahmed Elbahy |
 | Abdelrahman Sapry Abdelaziz |
