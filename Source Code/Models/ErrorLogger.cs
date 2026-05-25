@@ -53,5 +53,6 @@ namespace projjjjj
         /// Returns all in-memory logs (used when DB is unavailable).
         /// </summary>
         public static IReadOnlyList<string> GetMemoryLogs() => _memoryLog.AsReadOnly();
+        public static void ClearMemoryLogs() => _memoryLog.Clear();
     }
 }
