@@ -463,9 +463,9 @@ The application verifies the database connection on startup and warns you if it 
 
 | Member Name | Student ID |
 |---|---|
-| Ziad Ahmed Elbahy | 42410133 |
-| Abdelrahman Sapry Abdelaziz | 42410139 |
-| Zyad Akram Mahgoub | 42410292 |
-| Seif Eldeen Mohamed | 42410351 |
-| Mohamed Ehab | 42410317 |
-| Mohamed Ahmed Said | 42410478 |
+| Ziad Ahmed Elbahy |
+| Abdelrahman Sapry Abdelaziz |
+| Zyad Akram Mahgoub |
+| Seif Eldeen Mohamed |
+| Mohamed Ehab |
+| Mohamed Ahmed Said |
