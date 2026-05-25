@@ -7,6 +7,8 @@ namespace projjjjj
 {
     public partial class ErrorLogSettingsForm : BaseForm
     {
+        private bool _isLoadingLogs = false;
+        
         public ErrorLogSettingsForm()
         {
             InitializeComponent();
@@ -23,6 +25,9 @@ namespace projjjjj
 
         private void LoadErrorLogs()
         {
+            if (_isLoadingLogs) return;
+                _isLoadingLogs = true;
+                
             try
             {
                 using (SqlConnection conn = DatabaseHelper.GetConnection())
@@ -65,6 +70,10 @@ namespace projjjjj
                 ErrorLogger.Log(ex, "ErrorLogSettingsForm.LoadErrorLogs");
                 ShowMemoryLogs();
             }
+            finally
+            {
+                _isLoadingLogs = false;
+            }
         }
 
         private void ShowMemoryLogs()
@@ -96,6 +105,8 @@ namespace projjjjj
                 MessageBoxIcon.Warning);
 
             if (confirm != DialogResult.Yes) return;
+            
+            ErrorLogger.ClearMemoryLogs();
 
             try
             {
