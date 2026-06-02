@@ -408,8 +408,29 @@ Open `DatabaseHelper.cs` and update the connection string to match your SQL Serv
 private static readonly string connectionString =
     @"Server=YOUR_SERVER_NAME\SQLEXPRESS;Database=Vehicle_Rental;Integrated Security=True;";
 ```
+### 4. Add Your Custom Logo Assets
+To take advantage of the automatic theme logo injection inside BaseForm.cs, you must load your preferred logo into the project's internal resources:
 
-### 4. Build & Run
+```
+1. Open the Project Properties:
+In the Solution Explorer, locate the main project node (marked with the green C# icon).
+Right-click it and select Properties at the very bottom of the context menu.
+
+2. Navigate to the Resources Tab:
+In the left-hand sidebar of the configuration tab that opens, click on Resources.
+Note: If it says the project does not contain a default resources file, click the provided link to create one.
+
+3.Switch View to Images:
+Change the view dropdown at the top toolbar from "Strings" to "Images".
+
+4.Import Your File:
+Drag and drop your PNG logo file directly from your computer into this window workspace.
+```
+
+💡 Tip: Visual Studio will automatically generate a variable name based on the file name, allowing BaseForm.cs to map your custom logo globally.
+
+
+### 5. Build & Run
 
 ```
 1. Open VehicleRentalSystem.sln in Visual Studio
